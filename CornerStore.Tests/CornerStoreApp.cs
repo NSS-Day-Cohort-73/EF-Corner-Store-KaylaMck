@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using CornerStore.Models;
+using CornerStore.Data;
 
 namespace CornerStore.Tests;
 

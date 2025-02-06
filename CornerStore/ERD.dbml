@@ -1,0 +1,30 @@
+Table Cashier {
+ Id int [pk]
+ FirstName varchar 
+ LastName varchar 
+}
+
+Table Product {
+ Id int [pk]
+ ProductName varchar 
+ Price decimal 
+ Brand varchar 
+ CategoryId int [ref: > Category.Id]
+}
+
+Table Category {
+ Id int [pk]
+ CategoryName varchar 
+}
+
+Table Order {
+ Id int [pk]
+ CashierId int [ref: > Cashier.Id]  
+ PaidOnDate datetime
+}
+
+Table OrderProduct {
+ OrderId int [pk, ref: > Order.Id]
+ ProductId int [pk, ref: > Product.Id] 
+ Quantity int 
+}
